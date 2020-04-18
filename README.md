@@ -13,3 +13,9 @@
 
 ![Navigation](https://user-images.githubusercontent.com/60607967/79634735-6ae99280-813a-11ea-95b4-d49a21403c04.gif)
 
+# HomePage 🖌️ 
+![Home](https://user-images.githubusercontent.com/60607967/79635335-4ee7f000-813e-11ea-946d-25cb7ff19acf.jpg) 
+![Home2](https://user-images.githubusercontent.com/60607967/79635336-4f808680-813e-11ea-9685-94207a833456.jpg)
+# MarketingPage 🖌️ 
+![MarketinPage](https://user-images.githubusercontent.com/60607967/79635337-50191d00-813e-11ea-97f4-324f07782cb3.jpg)
+
