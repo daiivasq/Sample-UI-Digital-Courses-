@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:DigitalCourses="clr-namespace:DigitalCourses.Views"
+             mc:Ignorable="d"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="DigitalCourses.Views.HomePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="15" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <!--Grid row = "0"-->
+                <Image Source="menu.png" Grid.Row="0" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" HeightRequest="35" WidthRequest="35"/>
+                <Image Source="AvatarWomen.png" Grid.Row="0" Grid.Column="4" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="65" WidthRequest="65"/>
+                <!--Grid row = "1"-->
+                <Label Text="Daihiana Vasquez" TextColor="Black" FontAttributes="Bold" FontSize="21" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Image Source="search.png" Grid.Row="1" Grid.Column="4" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="30" WidthRequest="30"/>
+                <!--Grid row = "2"-->
+                <Frame BackgroundColor="#5e49ca" Grid.Row="2" Grid.RowSpan="3"  Grid.ColumnSpan="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" CornerRadius="20" Padding="20" Margin="0,20">
+                    <Grid ColumnSpacing="30">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Grid Column = "0"-->
+                        <Label Text="80" TextColor="White" FontSize="35" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="Total Courses" TextColor="White" FontSize="14" Grid.Row="1" Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                        <!--Grid Column = "1"-->
+                        <Label Text="20" TextColor="White" FontSize="35"  FontAttributes="Bold" Grid.Row="0" Grid.Column="1" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="Categories" TextColor="White" FontSize="14" Grid.Row="1" Grid.Column="1" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                        <!--Grid Column = "2"-->
+                        <Label Text="35" TextColor="White" FontSize="35"  FontAttributes="Bold"  Grid.Row="0" Grid.Column="2" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="Instructors" TextColor="White" FontSize="14" Grid.Row="1" Grid.Column="2" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                    </Grid>
+                </Frame>
+                <!-- GridRow = "5"-->
+                <Label Text="Top Categories" TextColor="Black" FontAttributes="Bold" FontSize="21" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="View All" TextColor="#ffa32c"  FontSize="18" Grid.Row="5" Grid.Column="4" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                <!-- GridRow ="6" , -->
+                
+                <Frame BackgroundColor="#f2f6ff" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="1" HeightRequest="200" WidthRequest="135" CornerRadius="20" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
+                    <DigitalCourses:TargetsViewPage 
+                              ImageModel="{Binding Development.ImageModel}"
+                              FirstText="{Binding Development.FirstText}"
+                              SecondText="{Binding Development.SecondText}"
+                        />
+                </Frame>
+                <Frame BackgroundColor="#fff3e5" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" HeightRequest="230" WidthRequest="135" CornerRadius="20" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
+                    <DigitalCourses:TargetsViewPage
+                              ImageModel="{Binding Design.ImageModel}"
+                              FirstText="{Binding Design.FirstText}"
+                              SecondText="{Binding Design.SecondText}"
+                        />
+                </Frame>
+                <Frame BackgroundColor="#ffeded" Grid.Row="7" Margin="0,-15" Grid.Column="0" Grid.ColumnSpan="1" HeightRequest="200" WidthRequest="135" CornerRadius="20" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding GoToMarketingPage}"/>
+                    </Frame.GestureRecognizers>
+                    <DigitalCourses:TargetsViewPage
+                              ImageModel="{Binding Marketing.ImageModel}"
+                              FirstText="{Binding Marketing.FirstText}"
+                              SecondText="{Binding Marketing.SecondText}"
+                        />
+                </Frame>
+                <Frame BackgroundColor="#dffff4" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3" HeightRequest="230" WidthRequest="135" CornerRadius="20" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
+                    <DigitalCourses:TargetsViewPage
+                              ImageModel="{Binding Photography.ImageModel}"
+                              FirstText="{Binding Photography.FirstText}"
+                              SecondText="{Binding Photography.SecondText}"
+                        />
+                </Frame>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

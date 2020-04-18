@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="myCollection"
+             x:Class="DigitalCourses.Views.CollectionVerticalViewPage">
+  <ContentView.Content>
+        <StackLayout Padding="0,20">
+            <ListView ItemsSource="{Binding CoursesList}"
+                      RowHeight="65">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding ImageModel}" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="StartAndExpand" HeightRequest="40" WidthRequest="50"/>
+                                <Label Text="{Binding FirstText}" Grid.Row="0" TextColor="Black" FontAttributes="Bold" FontSize="15" Grid.Column="1" Grid.ColumnSpan="4" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding SecondText}"  Grid.Row="0" Margin="0,20"  Grid.Column="1" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
